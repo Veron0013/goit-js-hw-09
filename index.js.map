@@ -1,1 +1,1 @@
-{"version":3,"file":"index.js","sources":["../src/main.js"],"sourcesContent":["import { nanoid } from \"nanoid\";\n\nconsole.log(nanoid());\n"],"names":["nanoid"],"mappings":"qxBAEA,QAAQ,IAAIA,GAAQ"}
+{"version":3,"file":"index.js","sources":[],"sourcesContent":[],"names":[],"mappings":""}

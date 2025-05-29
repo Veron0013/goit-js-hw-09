@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form task</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/goit-js-hw-09/2-form.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-09/assets/modulepreload-polyfill-B5Qt9EMX.js">
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-09/assets/vendor-K-8qVy6Y.js">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-09/assets/styles-CTCqwTdE.css">
+  </head>
+  <body>
+    <header class="header">
+  <div class="container">
+    <nav class="nav">
+      <a class="nav-logo" href="./index.html" aria-label="Site logo">
+        <svg class="nav-logo-icon" width="100" height="30">
+          <use href="/goit-js-hw-09/assets/sprite-E8vg0sBb.svg#logo"></use>
+        </svg>
+      </a>
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a class="nav-link {=$highlight-act}" href="./1-gallery.html"
+            >GALLERY</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="./2-form.html">FORM</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <div class="container form-container">
+      <form class="feedback-form" autocomplete="off">
+        <label class="form-label" for="email">Email</label>
+        <input class="form-input" type="email" name="email" autofocus />
+
+        <label class="form-label" for="message">Message</label>
+        <textarea class="form-text" name="message" rows="8"></textarea>
+
+        <button class="form-btn" type="submit">Submit</button>
+      </form>
+    </div>
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+  </body>
+</html>
