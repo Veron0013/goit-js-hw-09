@@ -50,3 +50,14 @@
 .nav-link.active::after {
   background: #747bff;
 }
+
+.back-link::before {
+  content: "<<<";
+  position: absolute;
+  top: 24px;
+  left: -30px;
+}
+
+.back-link {
+  padding: 24px;
+}
