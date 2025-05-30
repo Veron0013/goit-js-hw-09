@@ -1,3 +1,6 @@
+import SimpleLightbox from 'simplelightbox';
+//import 'simplelightbox/dist/simple-lightbox.min.css';
+
 const images = [
 	{
 		preview:
@@ -67,20 +70,18 @@ const images = [
 const elGallery = document.querySelector(".gallery");
 
 const createGalleryMark = (arr) => {
-
 	if (!elGallery) { return; }
 
 	return arr.map(element => {
 		return element.preview && element.original && element.description ?
 			`<li class="gallery-item">
-			<a class="gallery-link" href="#">
-				<img
-					class="gallery-image"
-					src="${element.preview}" 
-					data-source="${element.original}"
-					alt="${element.description}"/>
-			</a>
-		</li>`: null
+				<a class="gallery-link" href="${element.original}">
+					<img
+						class="gallery-image"
+						src="${element.preview}" 
+						alt="${element.description}"/>
+				</a>
+			</li>` : null;
 	})
 		.filter(el => el !== null)
 		.join("");
@@ -88,19 +89,12 @@ const createGalleryMark = (arr) => {
 
 elGallery.insertAdjacentHTML("afterbegin", createGalleryMark(images));
 
-elGallery.addEventListener("click", (e) => {
-	if (e.target === e.currentTarget) {
-		return;
-	}
-	const currItem = e.target.closest(".gallery-image");
+let gallery = new SimpleLightbox('.gallery a', {
+	captions: true,
+	captionsData: 'alt',
+	captionPosition: 'bottom',
+	animationSpeed: 250,
+	showCounter: false,
+});
 
-	const instance = basicLightbox.create(`
-    <div class = "gallery-modal"> 
-			<img class="gallery-image-large"
-			src="${currItem.dataset.source}"
-			alt="${currItem.alt}"/> 
-		</div>`);
-
-	instance.show();
-
-})
+lightbox.refresh();

@@ -20,15 +20,25 @@
     <div class="container form-container">
       <form class="feedback-form" autocomplete="off">
         <label class="form-label" for="email">Email</label>
-        <input class="form-input" type="email" name="email" autofocus />
+        <input
+          class="form-input"
+          type="email"
+          name="email"
+          id="email"
+          autofocus
+        />
 
         <label class="form-label" for="message">Message</label>
-        <textarea class="form-text" name="message" rows="8"></textarea>
+        <textarea
+          class="form-text"
+          name="message"
+          id="message"
+          rows="8"
+        ></textarea>
 
         <button class="form-btn" type="submit">Submit</button>
       </form>
     </div>
-    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
     <script type="module" src="./js/2-form.js"></script>
   </body>
 </html>
