@@ -9,7 +9,6 @@ updateText();
 const currentForm = document.querySelector(".feedback-form");
 
 currentForm.addEventListener("input", (e) => {
-	console.log(e.target.name);
 	if (e.target.name != "email" && e.target.name != "message") { return; }
 
 	updateLocalStorage(prepareData(e.target.name, e.target.value));
