@@ -58,7 +58,7 @@ validator
 	.addField('.form-text', [
 		{
 			validator: (value) => {
-				return value !== undefined && String(value).length > 3;
+				return value !== undefined && String(value).trim().length > 3;
 			},
 			errorMessage: 'Повідомлення повинне бути не менше 3 символів. З трьох символів лише погані повідомлення',
 		},
@@ -66,5 +66,8 @@ validator
 	.onSuccess(() => {
 		console.log("success", formData);
 		localStorage.removeItem(LOCAL_VALUES);
+		formData = getStorageData();
 		currentForm.reset();
+		//console.log(formData, localStorage.getItem(LOCAL_VALUES));
+
 	});
